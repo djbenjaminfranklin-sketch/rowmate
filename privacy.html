@@ -13,102 +13,118 @@
         .container { max-width: 700px; margin: 0 auto; padding: 40px 24px; }
         h2 { font-size: 20px; margin-top: 32px; margin-bottom: 12px; color: #6C3BFF; }
         p, li { color: #4B5563; font-size: 16px; margin-bottom: 12px; }
-        ul { padding-left: 24px; }
+        ul, ol { padding-left: 24px; }
+        a { color: #6C3BFF; }
         .back { display: inline-block; margin-top: 40px; color: #6C3BFF; text-decoration: none; font-weight: 600; }
     </style>
 </head>
 <body>
     <div class="header">
         <h1>Privacy Policy</h1>
-        <p>Last updated: March 26, 2026</p>
+        <p>Last updated: October 8, 2026</p>
     </div>
     <div class="container">
-        <p>ROWMATE ("we", "our", "the app") is operated by Benjamin Taieb. This Privacy Policy explains how we collect, use, and protect your information when you use the ROWMATE mobile application.</p>
+        <p>ROWMATE ("we", "our", "the app") is operated by Benjamin Taieb. This Privacy Policy explains what information the ROWMATE mobile application (iPhone and Android) collects, why, and the choices you have.</p>
 
         <h2>1. Information We Collect</h2>
         <p><strong>Information you provide:</strong></p>
         <ul>
-            <li>Nickname, profession, bio, and "What I love" text</li>
+            <li>Account: your e-mail address when you sign up with e-mail, or the identifier and e-mail provided by Apple or Google when you sign in with them (Apple may hide your e-mail)</li>
+            <li>Profile: nickname, profession, bio, "What I love" text, city, gender (optional), interest tags and "Open to" preferences, Instagram and LinkedIn usernames (optional)</li>
             <li>Profile photos (up to 4)</li>
-            <li>Interest tags and "Open to" preferences</li>
-            <li>Social media usernames (Instagram, LinkedIn) — optional</li>
-            <li>Apple ID information if you sign in with Apple (email may be hidden by Apple)</li>
-            <li>Chat messages (text, photos, voice messages)</li>
+            <li>Private messages with your connections: text, photos and voice messages</li>
+            <li>Messages you post in the group chat of a place</li>
+            <li>Waves, connection requests, blocks and reports you send</li>
         </ul>
         <p><strong>Information collected automatically:</strong></p>
         <ul>
-            <li>Bluetooth proximity data (only when Radar is manually activated)</li>
-            <li>Network status (online/offline) for sync purposes</li>
+            <li><strong>Precise location (GPS)</strong>, only while the app is open and only if you allow it — see section 3</li>
+            <li>Your presence in a place you chose to enter, and the "I'm going" intent if you set one</li>
+            <li>Bluetooth proximity data, only while your Radar is on — see section 4</li>
+            <li>A push notification token for your device, if you allow notifications</li>
+            <li>The language of the app and basic, non-advertising usage events</li>
+            <li>Purchase status, if you buy a pass or a subscription (payments are handled by Apple or Google; we never see your card)</li>
         </ul>
         <p><strong>Information we do NOT collect:</strong></p>
         <ul>
-            <li>GPS location or precise geolocation</li>
+            <li>Your location while the app is closed or in the background</li>
             <li>Contacts or address book</li>
             <li>Browsing history</li>
-            <li>Device identifiers for advertising</li>
-            <li>Any data from users who have not activated the Radar</li>
+            <li>Advertising identifiers — ROWMATE contains no advertising and does not track you across apps</li>
         </ul>
 
         <h2>2. How We Use Your Information</h2>
         <ul>
-            <li>To display your profile to nearby ROWMATE users when your Radar is active</li>
-            <li>To facilitate connection requests and peer-to-peer chat via Bluetooth</li>
-            <li>To sync your connections and messages when you are online</li>
-            <li>To enable continued chat with your connections when not physically nearby</li>
-            <li>To process block and report requests for user safety</li>
+            <li>To show your profile to other ROWMATE members: people near you when your Radar is on, people in the place you entered, and — if "Visible in Discover" is on — members of your city</li>
+            <li>To show you the places around you and let you enter the one you are in</li>
+            <li>To deliver connection requests, waves and messages, and to keep your conversations when you change phone</li>
+            <li>To send you notifications about messages, requests and waves</li>
+            <li>To translate messages written in another language</li>
+            <li>To handle blocks and reports and keep the community safe</li>
         </ul>
 
-        <h2>3. Bluetooth & Proximity Discovery</h2>
-        <p>ROWMATE uses Apple's Multipeer Connectivity framework (Bluetooth and local Wi-Fi) to discover nearby users. Key facts:</p>
+        <h2>3. Location and Places</h2>
         <ul>
-            <li>Discovery only occurs when you <strong>manually activate</strong> the Radar</li>
-            <li>No passive or background scanning occurs</li>
-            <li>Only users with ROWMATE installed and Radar active can see each other</li>
-            <li>No GPS or precise location data is used</li>
-            <li>All peer-to-peer data is encrypted by Apple's framework</li>
+            <li>ROWMATE asks for your location "while using the app". It never asks for background location.</li>
+            <li>While the app is open, your position is sent to our server to find the bars, cafés, restaurants and clubs around you. The coordinates of the area (not your identity) are sent to Google Places to retrieve those places.</li>
+            <li>Your position is not stored as a history. What is stored is the place you chose to <strong>enter</strong>, for as long as you are there: it disappears a few minutes after you leave or close the app.</li>
+            <li>When you are in a place, the other members present in the same place can see your profile, and you can see theirs. From outside, members only see how many people are there, never who.</li>
+            <li>The group chat of a place can be read and written only by members currently present. Its messages are deleted automatically after 6 hours.</li>
+            <li>If you refuse location access, the Places tab stays empty; the rest of the app keeps working.</li>
         </ul>
 
-        <h2>4. Data Storage</h2>
+        <h2>4. Bluetooth &amp; Proximity Discovery</h2>
         <ul>
-            <li><strong>On your device:</strong> All data is stored locally using Apple's SwiftData framework. Messages, connections, and profile data exist on your phone first.</li>
-            <li><strong>On our servers:</strong> When online and signed in, data is synced to Supabase (hosted on secure cloud infrastructure) to enable online chat continuity. Data is protected by Row Level Security — you can only access your own data.</li>
+            <li>Discovery by Bluetooth (and local Wi-Fi on iPhone) only happens while your Radar is on. Radar off, you are invisible.</li>
+            <li>While the Radar is on, your phone broadcasts a short profile (nickname, profession, short bio, a few interests, a small picture) to ROWMATE users a few metres away.</li>
+            <li>A full conversation only opens once both people have accepted the connection.</li>
         </ul>
 
-        <h2>5. Data Sharing</h2>
-        <p>We do <strong>not</strong> sell, rent, or share your personal data with third parties. Your data is shared only:</p>
+        <h2>5. Where Your Data Is Stored and Who Processes It</h2>
+        <p>Your data is stored on your device and, once you are signed in, on our servers. We do not sell or rent your personal data. We use these service providers, only to run the app:</p>
         <ul>
-            <li>With other ROWMATE users you choose to connect with (profile info and messages)</li>
-            <li>With Supabase as our infrastructure provider (data processor)</li>
-            <li>With Apple for authentication (Sign In with Apple)</li>
-            <li>If required by law or to protect user safety</li>
+            <li><strong>Supabase</strong> — database, file storage and authentication</li>
+            <li><strong>Google Places</strong> — list of places around a position</li>
+            <li><strong>Google Cloud Translation</strong> (or DeepL) — the text of a message to translate is sent without your identity</li>
+            <li><strong>Apple Push Notification service</strong> and <strong>Firebase Cloud Messaging</strong> (Google) — delivery of notifications</li>
+            <li><strong>Apple</strong> and <strong>Google</strong> — sign-in and in-app purchases</li>
         </ul>
+        <p>Your profile and messages are visible to the other ROWMATE members described above. We may disclose data if the law requires it or to protect someone's safety.</p>
 
-        <h2>6. Camera & Microphone</h2>
-        <p>ROWMATE requests access to your camera and microphone solely for:</p>
+        <h2>6. Camera, Photos &amp; Microphone</h2>
         <ul>
-            <li><strong>Camera:</strong> Taking profile photos and sharing photos in chat</li>
-            <li><strong>Microphone:</strong> Recording voice messages in chat</li>
+            <li>Camera and photo library: to choose profile photos and send photos in a chat</li>
+            <li>Microphone: to record voice messages</li>
         </ul>
-        <p>These permissions are requested only when needed and can be revoked at any time in iOS Settings.</p>
+        <p>These permissions are requested only when needed and can be revoked at any time in your phone's settings.</p>
 
-        <h2>7. Your Rights & Controls</h2>
+        <h2>7. How Long We Keep Your Data</h2>
         <ul>
-            <li>You can edit or delete your profile at any time</li>
-            <li>You can block and report any user</li>
-            <li>You can delete any connection and its chat history</li>
-            <li>You can deactivate the Radar at any time to become invisible</li>
-            <li>You can request complete deletion of your account and all associated data by contacting us</li>
+            <li>Profile, photos, connections and private messages: until you delete them or delete your account</li>
+            <li>Messages in the group chat of a place: 6 hours</li>
+            <li>Presence in a place: a few minutes after you leave; "I'm going": 18 hours</li>
+            <li>Reports: as long as needed to handle them</li>
         </ul>
 
-        <h2>8. Children's Privacy</h2>
-        <p>ROWMATE is not intended for users under 17 years of age. We do not knowingly collect data from children.</p>
+        <h2>8. Your Rights &amp; Controls</h2>
+        <ul>
+            <li>Edit your profile and photos at any time</li>
+            <li>Turn the Radar off, leave a place, or switch off "Visible in Discover" to stop being shown</li>
+            <li>Block and report any member, from their profile or from a message</li>
+            <li>Delete a connection and its conversation</li>
+            <li><strong>Delete your account and all associated data</strong> directly in the app (Profile &rarr; Delete account), or by following the steps on <a href="delete-account.html">this page</a></li>
+            <li>Ask us for a copy of your data, or for a correction, by e-mail</li>
+        </ul>
+        <p>If you live in the European Economic Area or the United Kingdom, you also have the rights granted by the GDPR, including the right to lodge a complaint with your data protection authority.</p>
 
-        <h2>9. Changes to This Policy</h2>
-        <p>We may update this Privacy Policy from time to time. Changes will be reflected with an updated date at the top of this page.</p>
+        <h2>9. Children's Privacy</h2>
+        <p>ROWMATE is not intended for users under 17 years of age. We do not knowingly collect data from children. If you believe a minor is using ROWMATE, contact us and we will delete the account.</p>
 
-        <h2>10. Contact</h2>
-        <p>For questions about this Privacy Policy or to request data deletion:</p>
-        <p><strong>Email:</strong> rowmateworld@gmail.com</p>
+        <h2>10. Changes to This Policy</h2>
+        <p>We may update this Privacy Policy. Changes are shown with an updated date at the top of this page.</p>
+
+        <h2>11. Contact</h2>
+        <p><strong>Email:</strong> <a href="mailto:rowmateworld@gmail.com">rowmateworld@gmail.com</a></p>
         <p><strong>Developer:</strong> Benjamin Taieb</p>
 
         <a href="index.html" class="back">&larr; Back to ROWMATE</a>
